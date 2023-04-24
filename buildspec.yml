@@ -21,9 +21,6 @@ artifacts:
   # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
     - '**/*'
-#     - src/**/*
-#     - package.json
-#     - package-lock.json
   base-directory: build
 cache:
   path:
