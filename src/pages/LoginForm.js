@@ -38,7 +38,7 @@ export default function AddUser() {
 
     async function loadUser(userId,password){
         console.log(userId);
-        const result = await axios.get(`http://localhost:8080/user/login/${userId}/${password}`);
+        const result = await axios.get(`http://x21213313-env.eba-p4pauu4j.us-east-2.elasticbeanstalk.com/user/login/${userId}/${password}`);
         console.log(result.data.u);
         setUser(result.data);
         if(result.data.userType=="1"){
@@ -81,13 +81,14 @@ export default function AddUser() {
                             </label>
                         </div>
                         <button name="submit" type="submit" className='btn btn-outline-primary mx-2'>Sign In</button>
-                        <button name="submit" to="/adduser" className='btn btn-outline-primary mx-2'>Sign Up</button>
+                        <Link name="submit" to="/adduser" className='btn btn-outline-primary mx-2'>Sign Up</Link>
                         <button name="cancel" type="reset" to="/" onClick={reset} className='btn btn-outline-secondary mx-2'>Cancel</button>
-                        <Link className="btn btn-outline-light" to="/adduser">Add User</Link>
                     </form>
                 </div>
-
+            
             </div>
+            <div><h4>ADMIN LOGIN</h4> ID-admin   PASSWORD- admin</div><br/>
+            <>USER LOGIN : Id-test2 PW- test2</>
         </div>
     )
 }
